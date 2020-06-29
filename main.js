@@ -50,9 +50,11 @@ document.getElementById("start").onclick = () => {
     });
     let updateInterval = setInterval(() => {
         timestep++;
-        susceptible -= l * susceptible * infected;
-        infected += l * susceptible * infected;
-        infected -= y * infected;
+        const s = susceptible;
+        const i = infected;
+        susceptible -= l * s * i;
+        infected += l * s * i;
+        infected -= y * i;
         model.data.labels.push("t" + timestep);
         model.data.datasets.forEach(dataset => {
             switch (dataset.label) {
