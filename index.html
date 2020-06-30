@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    Enter population size: <input type="number" value="1000" id="size"><br> Enter λ: <input value="0.65" type="number" id="l"><br> Enter γ: <input value="0.15" type="number" id="y"> <br> Enter I (Proportion of population that starts infected. If left
-    blank, one person starts infected):
+    Enter population size: <input type="number" value="1000" id="size"><br> Enter λ (contact rate): <input value="0.65" type="number" id="l"><br> Enter γ (recovery/death rate from disease): <input value="0.15" type="number" id="y"> <br><input value="0.15"
+        type="number" id="y"> <br>Enter v (birth rate): <input value="0" type="number" id="v"><br>Enter μ (death rate): <input value="0" type="number" id="u"><br>Enter α (immune-to-susceptible rate): <input value="0" type="number" id="a"> <br> Enter I (Proportion
+    of population that starts infected. If left blank, one person starts infected):
     <input type="number" id="I"> <br> Enter playback speed (in seconds): <input id="speed" type="number" value="1"> <br>
     <button id="start">Start Simulation</button>
+    <button id="end">End Simulation</button>
     <br>
     <canvas id="model"></canvas>
     <script src="main.js"></script>
